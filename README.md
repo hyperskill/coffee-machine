@@ -2,4 +2,4 @@
 
 Project: Coffee machine
 
-Create the *src* directory and put your *.java* file(s) in it.
+Create the *src* directory and put your *.kt* file(s) in it.
