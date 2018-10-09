@@ -1,5 +1,5 @@
 package coffeeMachine
 
 fun main(args: Array<String>) {
-    print("Hello world!")
+    print("Ok, shall we have a pull request before coffee")
 }
