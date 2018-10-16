@@ -1,5 +1,5 @@
-# Coffee machine
+# Coffee Machine
 
-Project: Coffee machine
+Project: Coffee Machine
 
 Go to the *src* directory, change *main.kt* and put your *.kt* file(s) in it.
