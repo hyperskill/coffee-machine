@@ -25,5 +25,67 @@ public class CoffeeMachine {
                 String.format("%d of disposable cups\n", this.cups) +
                 String.format("%d of money", this.money));
     }
+    private void processBuy() {
+        System.out.println("What do you want to buy? 1 - espresso, 2 - latte, 3 - cappuccino, back - to main menu:");
+        String type = this.scanner.nextLine();
+
+        if(type.equals("back")) return;;
+
+        this.buy(Integer.valueOf(type));
+    }
+    private void buy(int type) {
+        int water = 0;
+        int milk = 0;
+        int beans = 0;
+        int money = 0;
+
+        switch (type) {
+            case 1: {
+                water = 250;
+                milk = 0;
+                beans = 16;
+                money = 4;
+                break;
+            }
+            case 2: {
+                water = 350;
+                milk = 75;
+                beans = 20;
+                money = 7;
+                break;
+            }
+            case 3:{
+                water = 200;
+                milk = 100;
+                beans = 12;
+                money = 6;
+                break;
+            }
+            default: {
+                break;
+            }
+        }
+
+        if(this.water < water) {
+            System.out.println("Sorry, not enough water!");
+        }
+        else if(this.milk < milk) {
+            System.out.println("Sorry, not enough milk!");
+        }
+        else if(this.beans < beans) {
+            System.out.println("Sorry, not enough coffee beans!");
+        }
+        else if(this.cups < 1) {
+            System.out.println("Sorry, not enough disposable cups!");
+        } else {
+            System.out.println("I have enough resources, making you a coffee!");
+            this.water -= water;
+            this.milk -= milk;
+            this.beans -= beans;
+            this.cups--;
+            this.money += money;
+        }
+    }
+
 
 }
