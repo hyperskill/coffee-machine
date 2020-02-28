@@ -17,5 +17,13 @@ public class CoffeeMachine {
         this.cups = 9;
         this.money = 550;
     }
+    public void printState() {
+        System.out.println("The coffee machine has:\n" +
+                String.format("%d of water\n", this.water) +
+                String.format("%d of milk\n", this.milk) +
+                String.format("%d of coffee beans\n", this.beans) +
+                String.format("%d of disposable cups\n", this.cups) +
+                String.format("%d of money", this.money));
+    }
 
 }
