@@ -9,7 +9,7 @@ public class CoffeeMachine {
     private int beans;
     private int cups;
     private int money;
-    private CoffeeMachine() {
+    public CoffeeMachine() {
         this.scanner = new Scanner(System.in);
         this.water = 400;
         this.milk = 540;
