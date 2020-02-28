@@ -47,16 +47,18 @@ public class CoffeeMachine {
         this.fill(water, milk, beans, cups);
 
     }
+    private void processTake() {
+        System.out.println(String.format("I gave you $%d", this.money));
+        this.take();
+    }
+
     private void fill(int water, int milk, int beans, int cups) {
         this.water +=water;
         this.milk +=milk;
         this.beans += beans;
         this.cups += cups;
     }
-    private void processTake() {
-        System.out.println(String.format("I gave you $%d", this.money));
-        this.take();
-    }
+
     private void take() {
         this.money = 0;
     }
