@@ -53,6 +53,14 @@ public class CoffeeMachine {
         this.beans += beans;
         this.cups += cups;
     }
+    private void processTake() {
+        System.out.println(String.format("I gave you $%d", this.money));
+        this.take();
+    }
+    private void take() {
+        this.money = 0;
+    }
+
     private void buy(int type) {
         int water = 0;
         int milk = 0;
